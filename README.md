@@ -4,7 +4,7 @@ Website for Maximilian McDonald's private studio days in Mexico City.
 
 ## Swapping photos (no code needed)
 
-The page has seven photo spots. Upload a JPG with the exact name below into the `images` folder and it appears on the site. Leave a spot empty and it simply doesn't show.
+The page has nine photo spots. Upload a JPG with the exact name below into the `images` folder and it appears on the site. Leave a spot empty and it simply doesn't show.
 
 | File name | Where it appears | Best shape |
 |---|---|---|
