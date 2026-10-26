@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Private artist studio days in Mexico City for collectors, with art dealer Maximilian McDonald.">
+<meta property="og:title" content="Maximilian McDonald · Private studio days in Mexico City">
+<meta property="og:description" content="Meet the artist, see the work where it's made, and decide in your own time.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maximilianmcdonald.com/">
+<meta property="og:image" content="https://maximilianmcdonald.com/images/hero.jpg">
+<!-- AD TRACKING: paste the Meta Pixel and LinkedIn Insight Tag snippets here. -->
+<title>Maximilian McDonald</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a dealer's catalogue — wide typographic hero, then a catalogue-entry offer card, plain text sections on a concrete-grey ground, one cobalt accent. */
+:root{
+  --bg:#E7E8E4;
+  --paper:#F4F4F1;
+  --ink:#16181C;
+  --muted:#5A5F63;
+  --rule:#C5C8C2;
+  --accent:#1E3B9C;
+  --accent-ink:#F4F4F1;
+  --display:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --body:"Work Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121417; --paper:#1A1D21; --ink:#ECEDE8; --muted:#9BA0A4; --rule:#2F343A; --accent:#8FA6F2; --accent-ink:#121417; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121417; --paper:#1A1D21; --ink:#ECEDE8; --muted:#9BA0A4; --rule:#2F343A; --accent:#8FA6F2; --accent-ink:#121417; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+@media (min-width:720px){.wrap{padding-left:max(40px, env(safe-area-inset-left, 0px));padding-right:max(40px, env(safe-area-inset-right, 0px))}}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* header */
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;border-bottom:1px solid var(--rule)}
+.wordmark{font-family:var(--display);font-size:20px;letter-spacing:.01em;text-decoration:none}
+.wordmark span{font-style:italic;color:var(--muted)}
+.nav-apply{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.nav-apply:hover{color:var(--accent);border-color:var(--accent)}
+
+/* hero */
+.hero .wrap{padding-block:72px 64px;display:grid;gap:28px}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(44px, 8.2vw, 104px);line-height:.98;letter-spacing:-.02em;margin:0;text-wrap:balance;max-width:13ch}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{font-size:clamp(18px,2vw,21px);max-width:40ch;margin:0;color:var(--ink)}
+.coords{display:flex;flex-wrap:wrap;gap:8px 24px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--accent-ink);font-family:var(--body);font-weight:600;font-size:16px;padding:15px 24px;border:0;border-radius:2px;text-decoration:none;cursor:pointer;width:fit-content;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+@media (prefers-reduced-motion: reduce){.btn{transition:none}.btn:hover{transform:none}}
+
+/* sections */
+section{border-top:1px solid var(--rule)}
+section .wrap{padding-block:72px}
+.sec-head{display:grid;gap:10px;margin-bottom:36px}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.4vw,52px);line-height:1.05;letter-spacing:-.01em;margin:0;text-wrap:balance;max-width:20ch}
+.split{display:grid;gap:40px}
+@media (min-width:860px){.split{grid-template-columns:1fr 1fr;gap:64px;align-items:start}}
+.prose{display:grid;gap:18px;max-width:62ch;min-width:0}
+.prose p{margin:0}
+
+/* catalogue entry */
+.entry{background:var(--paper);border:1px solid var(--rule);padding:28px;display:grid;gap:22px;min-width:0}
+.entry-title{font-family:var(--display);font-style:italic;font-size:30px;line-height:1.15;margin:0}
+.entry dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 24px;font-size:15px}
+.entry dt{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.entry dd{margin:0;min-width:0}
+.entry .fee{font-family:var(--display);font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
+.entry small{display:block;font-size:13px;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:step}
+@media (min-width:860px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps li{counter-increment:step;padding:24px 0;border-top:1px solid var(--ink);display:grid;gap:8px;align-content:start;min-width:0}
+@media (min-width:860px){.steps li{padding:24px 24px 0 0}}
+.steps li::before{content:counter(step, upper-roman);font-family:var(--display);font-style:italic;font-size:22px;color:var(--accent)}
+.steps h3{font-size:17px;font-weight:600;margin:0}
+.steps p{margin:0;font-size:15px;color:var(--muted)}
+
+/* pull statement */
+.statement{font-family:var(--display);font-size:clamp(28px,3.6vw,42px);line-height:1.15;margin:0;max-width:22ch;text-wrap:balance}
+.statement em{color:var(--accent)}
+
+/* about */
+.creds{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.creds li{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.creds li:first-child{border-top:1px solid var(--rule)}
+.creds .label{padding-top:3px}
+
+/* form */
+.apply .wrap{padding-block:72px 88px}
+form{display:grid;gap:20px;max-width:720px}
+.row{display:grid;gap:20px}
+@media (min-width:640px){.row{grid-template-columns:1fr 1fr}}
+.field{display:grid;gap:8px;min-width:0}
+label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+input,select,textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:2px;padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+textarea{min-height:110px;resize:vertical}
+.form-note{font-size:14px;color:var(--muted);margin:0}
+.error{color:var(--accent);font-size:14px;margin:0}
+.thanks{max-width:620px;display:grid;gap:14px;border-top:1px solid var(--ink);padding-top:24px}
+.thanks h3{font-family:var(--display);font-weight:400;font-size:34px;margin:0}
+.thanks p{margin:0}
+
+footer .wrap{padding-block:28px 40px;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+figure.photo{margin:0;background:var(--paper);border:1px solid var(--rule);overflow:hidden}
+figure.photo img{display:block;width:100%;height:auto;object-fit:cover}
+.hero-photo{aspect-ratio:16/8;max-width:100%}
+.hero-photo img{height:100%}
+@media (max-width:640px){.hero-photo{aspect-ratio:4/3}}
+.side-photo{aspect-ratio:4/5;max-width:100%}
+.side-photo img{height:100%}
+.sending{opacity:.6;pointer-events:none}
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="wrap">
+    <a class="wordmark" href="#top">Maximilian McDonald <span>art dealer</span></a>
+    <a class="nav-apply" href="#apply">Apply</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="coords">
+        <span class="label">Ciudad de México</span>
+        <span class="label">19.4326° N, 99.1332° W</span>
+        <span class="label">Private studio days</span>
+      </div>
+      <h1>See the work where it is <em>made.</em></h1>
+      <p>I take collectors into the studios of artists working in Mexico City today. You meet the artist, see the work up close, and decide in your own time.</p>
+      <a class="btn" href="#apply">Apply for a studio day</a>
+      <figure class="photo hero-photo"><img src="images/hero.jpg" alt="Inside an artist's studio in Mexico City" onerror="this.parentElement.hidden=true"></figure>
+    </div>
+  </div>
+
+  <section id="offer">
+    <div class="wrap split">
+      <div class="prose">
+        <div class="sec-head">
+          <span class="label">The offer</span>
+          <h2>A private day in the studios, planned around what you collect.</h2>
+        </div>
+        <p>Mexico City has one of the most active contemporary art scenes in the world, and most of it happens behind closed doors. The best work is often in studios that aren't open to the public and don't show up in a search.</p>
+        <p>Before your visit, we talk about what you collect, what you live with, and what you're looking for. I build a route of studios to match, make the introductions, and translate where needed. If you find a piece you want, I handle the purchase from there.</p>
+      </div>
+
+      <div style="display:grid;gap:24px;min-width:0">
+      <figure class="photo side-photo"><img src="images/studio-1.jpg" alt="A studio visit in Mexico City" onerror="this.parentElement.hidden=true"></figure>
+      <article class="entry" aria-label="Studio day details">
+        <span class="label">Cat. entry</span>
+        <p class="entry-title">Private Studio Day,<br>Ciudad de México</p>
+        <dl>
+          <dt>Format</dt><dd>Private, for you and a guest</dd>
+          <dt>Duration</dt><dd>One day, three to four studios</dd>
+          <dt>Includes</dt><dd>Pre-visit consultation, route planning, introductions, translation</dd>
+          <dt>After</dt><dd>Invoicing, crating and shipping for any acquisition</dd>
+          <dt>Fee</dt><dd><span class="fee">USD 1,000</span></dd>
+        </dl>
+        <small>Credited in full toward any work you acquire through me. No purchase is expected.</small>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">How it works</span>
+        <h2>From application to studio door.</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Apply</h3><p>Tell me when you'll be in Mexico City and what kind of work interests you.</p></li>
+        <li><h3>Call</h3><p>A short call to talk through your collection, your space and your budget.</p></li>
+        <li><h3>Studio day</h3><p>We visit three to four studios chosen for you. Ask anything, take your time.</p></li>
+        <li><h3>After</h3><p>If a piece stays with you, I handle the sale, paperwork and shipping home.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="pressure">
+    <div class="wrap split">
+      <p class="statement">You pay for the day, <em>not for a sale.</em></p>
+      <div class="prose">
+        <p>Many studio visits come with an unspoken expectation to buy. This one doesn't. The fee covers my time, my access and my judgment, so the day stands on its own whether you buy something or not.</p>
+        <p>Plenty of collectors leave with nothing but a clearer sense of what they want. Some come back to a piece months later. Both are good outcomes. If you do acquire a work through me, your fee is credited toward it in full.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap split">
+      <div class="prose">
+        <div class="sec-head">
+          <span class="label">About</span>
+          <h2>Maximilian McDonald</h2>
+        </div>
+        <p>I'm an art dealer based in Mexico City and San Francisco. I work with Mexican modern art and with contemporary artists working in Mexico City today, and I've spent years in the city's studios, galleries and collections.</p>
+        <p>I started doing studio visits because I saw how differently people respond to art when they meet the person who made it. These days are how I share that with collectors.</p>
+      </div>
+      <div style="display:grid;gap:24px;min-width:0">
+      <figure class="photo side-photo"><img src="images/about.jpg" alt="Maximilian McDonald" onerror="this.parentElement.hidden=true"></figure>
+      <ul class="creds">
+        <li><span class="label">Gallery</span><span>Founder, Maximilian Contemporary</span></li>
+        <li><span class="label">Partner</span><span>Bond Latin Gallery, San Francisco</span></li>
+        <li><span class="label">Focus</span><span>Contemporary Mexico City artists, Mexican modernism, Oaxacan art</span></li>
+        <li><span class="label">Film</span><span>Art, design and architecture on YouTube as <a href="https://www.youtube.com/@maxa_mili" target="_blank" rel="noopener">@maxa_mili</a> since 2011</span></li>
+      </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="apply" class="apply">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Apply</span>
+        <h2>Request a studio day.</h2>
+        <p class="form-note">I take a limited number of studio days each month. I reply to every application within two business days.</p>
+      </div>
+
+      <form id="apply-form" novalidate>
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="row">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="f-city">Where you're based</label><input id="f-city" name="city" autocomplete="address-level2" placeholder="City, country"></div>
+          <div class="field"><label for="f-dates">Dates in Mexico City</label><input id="f-dates" name="dates" placeholder="e.g. Feb 4–9, or flexible"></div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="f-budget">Typical budget per work</label>
+            <select id="f-budget" name="budget">
+              <option value="">Select a range</option>
+              <option>Under $5,000</option>
+              <option>$5,000 – $15,000</option>
+              <option>$15,000 – $50,000</option>
+              <option>$50,000 and up</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-source">How you found me</label>
+            <select id="f-source" name="source">
+              <option value="">Select one</option>
+              <option>Instagram</option>
+              <option>Facebook</option>
+              <option>LinkedIn</option>
+              <option>YouTube</option>
+              <option>Referral</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="f-interest">What do you collect, or want to?</label><textarea id="f-interest" name="interest" placeholder="Painting, sculpture, works on paper, a specific artist, a wall that needs something…"></textarea></div>
+        <p class="error" id="f-error" hidden></p>
+        <button class="btn" type="submit">Send application</button>
+      </form>
+
+      <div class="thanks" id="thanks" hidden>
+        <span class="label">Received</span>
+        <h3>Thank you.</h3>
+        <p>Your application is in. I'll reply by email within two business days to set up a short call.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="label">Maximilian McDonald · Art dealer</span>
+    <span class="label">Mexico City · San Francisco</span>
+  </div>
+</footer>
+
+<script>
+// FORM: paste your Formspree endpoint between the quotes, e.g. "https://formspree.io/f/abcdwxyz"
+var FORM_ENDPOINT = "";
+
+(function(){
+  var form=document.getElementById('apply-form');
+  var err=document.getElementById('f-error');
+  var thanks=document.getElementById('thanks');
+  function showError(msg){err.textContent=msg;err.hidden=false;}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('f-name').value.trim();
+    var email=document.getElementById('f-email').value.trim();
+    if(!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showError('Please add your name and a valid email so I can reply.');return;}
+    if(!FORM_ENDPOINT){showError('Applications are opening soon. Please check back in a few days.');return;}
+    err.hidden=true;
+    form.classList.add('sending');
+    fetch(FORM_ENDPOINT,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(!r.ok) throw new Error();
+        form.hidden=true; thanks.hidden=false;
+        thanks.scrollIntoView({block:'center'});
+        if(window.fbq) fbq('track','Lead');
+        // LinkedIn conversion tracking goes here once the Insight Tag is set up.
+      })
+      .catch(function(){showError('Your application didn\'t send. Check your connection and try again.');})
+      .finally(function(){form.classList.remove('sending');});
+  });
+})();
+</script>
+
+</body>
+</html>
