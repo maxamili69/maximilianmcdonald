@@ -1,6 +1,6 @@
 # maximilianmcdonald.com
 
-Website for Maximilian McDonald's private studio days in Mexico City.
+Website for Maximilian Mc Donald's private studio days in Mexico City.
 
 ## Swapping photos (no code needed)
 
